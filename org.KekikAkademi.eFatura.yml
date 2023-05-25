@@ -1,26 +1,15 @@
-# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
-
 app-id: org.KekikAkademi.eFatura
 runtime: org.gnome.Platform
 runtime-version: "44"
 sdk: org.gnome.Sdk
 command: eFaturaGUI
-
 finish-args:
-  # ? X11 + XShm Erişimi
   - --share=ipc
-  # ? Wayland Erişimi
   - --socket=wayland
-  # ? Wayland mevcut olmadığında X11 Erişimi Ver
   - --socket=fallback-x11
-  # ? Ağ Erişimi
   - --share=network
-  # ? PulseAudio Kullanarak Sesleri Çal
   - --socket=pulseaudio
-  # ! tesseract Erişim
   - --env=TESSDATA_PREFIX=/app/share/tessdata
-
-# ! tesseract Çöpü Temizle
 cleanup:
   - /sbin
   - /include
@@ -33,7 +22,6 @@ cleanup:
   - /share/cmake*
   - "*.a"
   - "*.la"
-
 modules:
 - SRC/tesseract.yaml
 - SRC/python3-requirements.yaml
