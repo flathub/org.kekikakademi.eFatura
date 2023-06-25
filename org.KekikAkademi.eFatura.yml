@@ -49,4 +49,4 @@ modules:
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
-      commit: 684ef4471e637bff821268547b5996a2591122c8
+      commit: 586e4b89118130e55fbe7025f1519a48431b8d98
