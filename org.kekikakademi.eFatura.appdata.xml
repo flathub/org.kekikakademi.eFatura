@@ -24,7 +24,6 @@
     <p>E-Invoice Usage Inquiry from Tax or TR Identity Number</p>
     <p xml:lang="tr_TR">Vergi veya TC Kimlik Numarasından E-Fatura Mükellefiyet Sorgusu</p>
     <p>An example application prepared with Python language and GTK Library.</p>
-    <p xml:lang="tr_TR">https://t.me/kekikakademi için hazırlanmıştır..</p>
   </description>
 
   <screenshots>
