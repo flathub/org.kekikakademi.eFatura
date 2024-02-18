@@ -42,11 +42,12 @@ modules:
   buildsystem: simple
   build-commands:
     - python3 -m pip install . --prefix=${FLATPAK_DEST}
-    - desktop-file-edit --set-key=Icon --set-value=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
-    - desktop-file-edit --remove-key=Version Shared/org.KekikAkademi.eFatura.desktop
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
     - install -Dm644 org.kekikakademi.eFatura.appdata.xml /app/share/appdata/$FLATPAK_ID.appdata.xml
     - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+
+    - desktop-file-edit --set-key=Icon --set-value=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
+    - sed -i '/^Version/d' Shared/org.KekikAkademi.eFatura.desktop
+    - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
 
   sources:
     - type: git
