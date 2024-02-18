@@ -1,6 +1,6 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-app-id: org.KekikAkademi.eFatura
+app-id: org.kekikakademi.eFatura
 runtime: org.gnome.Platform
 runtime-version: "44"
 sdk: org.gnome.Sdk
@@ -41,12 +41,15 @@ modules:
 - name: eFatura-yukleyici
   buildsystem: simple
   build-commands:
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/org.KekikAkademi.eFatura.desktop
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.appdata.xml /app/share/appdata/org.KekikAkademi.eFatura.appdata.xml
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/org.KekikAkademi.eFatura.svg
     - python3 -m pip install . --prefix=${FLATPAK_DEST}
+    - desktop-file-edit --set-key=Icon --set-value=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
+    - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
+    - install -Dm644 org.kekikakademi.eFatura.appdata.xml /app/share/appdata/$FLATPAK_ID.appdata.xml
+    - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
 
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
       commit: 586e4b89118130e55fbe7025f1519a48431b8d98
+    - type: file
+      path: org.kekikakademi.eFatura.appdata.xml
