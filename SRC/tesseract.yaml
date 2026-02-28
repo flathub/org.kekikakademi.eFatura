@@ -3,21 +3,22 @@ name: tesseract
 buildsystem: simple
 build-commands: []
 modules:
+  # Dependency of tesseract
   - name: leptonica
     buildsystem: cmake-ninja
     builddir: true
     sources:
       - type: archive
-        url: https://github.com/DanBloomberg/leptonica/releases/download/1.82.0/leptonica-1.82.0.tar.gz
-        sha256: 155302ee914668c27b6fe3ca9ff2da63b245f6d62f3061c8f27563774b8ae2d6
+        url: https://github.com/DanBloomberg/leptonica/releases/download/1.85.0/leptonica-1.85.0.tar.gz
+        sha256: 3745ae3bf271a6801a2292eead83ac926e3a9bc1bf622e9cd4dd0f3786e17205
 
   - name: tesseract
     buildsystem: cmake-ninja
     builddir: true
     sources:
       - type: archive
-        url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.2.0.zip
-        sha256: f30e343cb93ca77f1fad013aeb87edb9191dcd1c7d4ee55d425f70c2af7817a1
+        url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.1.zip
+        sha256: 291f4808d347410641d2b0d895ae424a45011e37c295067ee749648a2f58fef6
 
   - name: tessdata-fast
     buildsystem: simple

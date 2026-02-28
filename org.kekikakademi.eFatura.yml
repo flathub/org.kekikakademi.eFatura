@@ -2,7 +2,7 @@
 
 app-id: org.kekikakademi.eFatura
 runtime: org.gnome.Platform
-runtime-version: "46"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 command: eFaturaGUI
 
@@ -41,7 +41,7 @@ modules:
 - name: eFatura-yukleyici
   buildsystem: simple
   build-commands:
-    - python3 -m pip install . --prefix=${FLATPAK_DEST}
+    - python3 -m pip install . --prefix=${FLATPAK_DEST} --no-build-isolation
     - install -Dm644 org.kekikakademi.eFatura.appdata.xml /app/share/appdata/$FLATPAK_ID.appdata.xml
     - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
 
