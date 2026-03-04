@@ -12,7 +12,7 @@
   <summary>E-Invoice Usage Inquiry from Tax or TR Identity Number</summary>
   <summary xml:lang="tr_TR">Vergi veya TC Kimlik Numarasından E-Fatura Mükellefiyet Sorgusu</summary>
 
-  <developer_name>keyiflerolsun</developer_name>
+  <developer id="org.kekikakademi"><name>keyiflerolsun</name></developer>
   <url type="homepage">https://kekikakademi.org</url>
   <url type="donation">https://keyiflerolsun.me/Kahve</url>
   <url type="help">https://t.me/KekikKahve</url>
@@ -23,7 +23,6 @@
   <description>
     <p>E-Invoice Usage Inquiry from Tax or TR Identity Number</p>
     <p xml:lang="tr_TR">Vergi veya TC Kimlik Numarasından E-Fatura Mükellefiyet Sorgusu</p>
-    <p>An example application prepared with Python language and GTK Library.</p>
   </description>
 
   <screenshots>
@@ -33,7 +32,7 @@
   </screenshots>
 
   <categories>
-      <category>Education</category>
+      <category>Utility</category>
   </categories>
 
   <releases>
@@ -44,8 +43,8 @@
         </p>
       </description>
     </release>
-    <release version="1.0.5" date="2023-5-23"></release>
-    <release version="0.0.1" date="2022-8-13"></release>
+    <release version="1.0.5" date="2023-5-23"/>
+    <release version="0.0.1" date="2022-8-13"/>
   </releases>
 
   <content_rating type="oars-1.1"/>
