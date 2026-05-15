@@ -46,7 +46,7 @@ modules:
     - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
 
     - sed -i '/^Version/d' Shared/org.KekikAkademi.eFatura.desktop
-    - desktop-file-edit --set-key=Icon --set-value=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
+    - desktop-file-edit --set-icon=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
     - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
 
   sources:
