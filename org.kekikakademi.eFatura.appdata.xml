@@ -36,6 +36,22 @@
   </categories>
 
   <releases>
+    <release version="1.1.7" date="2026-08-14">
+      <description>
+        <p>
+          Arayüzde sorgu sırasında uygulamanın kilitlenmesine neden olan
+          asyncio/GLib uyumsuzluğu giderildi, CI ve Flatpak paketleme
+          hataları düzeltildi.
+        </p>
+      </description>
+    </release>
+    <release version="1.1.2" date="2026-08-11">
+      <description>
+        <p>
+          GTK 4 ve Libadwaita grafik arayüzüne geçildi. Python uv paketleme desteği eklendi.
+        </p>
+      </description>
+    </release>
     <release version="1.1.1" date="2023-6-25">
       <description>
         <p>

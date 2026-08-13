@@ -1,16 +1,8 @@
-# Generated with flatpak-pip-generator --runtime=org.gnome.Sdk//49 --requirements-file=requirements.txt --yaml --output python3-requirements
-build-commands: []
+# Generated with flatpak-pip-generator --pyproject-file /home/runner/work/eFatura/eFatura/pyproject.toml --runtime org.gnome.Sdk//49 --prefer-wheels pillow --yaml --checker-data --ignore-pkg pygobject -o /home/runner/work/eFatura/eFatura/Shared/SRC/python3-requirements.yaml
+name: python3-requirements.yaml
 buildsystem: simple
+build-commands: []
 modules:
-  - name: python3-install-freedesktop
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "install-freedesktop" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/99/33/5dfcb7d0c1bd0fe47e20fd6a0edde86ab15b7bbfba95c192af08c2e448c1/install_freedesktop-0.1.2-py2.py3-none-any.whl
-        sha256: 10b8a91f9493f20e9b57d8130701b6e30595adcf3df62416e90a48404bf59676
   - name: python3-rich
     buildsystem: simple
     build-commands:
@@ -18,14 +10,33 @@ modules:
         --prefix=${FLATPAK_DEST} "rich" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl
-        sha256: 87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147
+        url: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
+        sha256: 9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a
+        x-checker-data:
+          type: pypi
+          name: markdown-it-py
+          packagetype: bdist_wheel
       - type: file
         url: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
         sha256: 84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8
+        x-checker-data:
+          type: pypi
+          name: mdurl
+          packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/14/25/b208c5683343959b670dc001595f2f3737e051da617f66c31f7c4fa93abc/rich-14.3.3-py3-none-any.whl
-        sha256: 793431c1f8619afa7d3b52b2cdec859562b950ea0d4b6b505397612db8d5362d
+        url: https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl
+        sha256: 81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176
+        x-checker-data:
+          type: pypi
+          name: pygments
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl
+        sha256: 33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb
+        x-checker-data:
+          type: pypi
+          name: rich
+          packagetype: bdist_wheel
   - name: python3-requests
     buildsystem: simple
     build-commands:
@@ -33,21 +44,41 @@ modules:
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9a/3c/c17fb3ca2d9c3acff52e30b309f538586f9f5b9c9cf454f3845fc9af4881/certifi-2026.2.25-py3-none-any.whl
-        sha256: 027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa
+        url: https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl
+        sha256: 62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775
+        x-checker-data:
+          type: pypi
+          name: certifi
+          packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz
-        sha256: 94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a
+        url: https://files.pythonhosted.org/packages/22/c7/754d09943a616937df61e4ba367c409ded2a987e872972098d51a6fcf73b/charset_normalizer-3.5.0-py3-none-any.whl
+        sha256: 993dfcbe75a85a3784abb5084f2c41b915767c90546fcc92803cffa28611baea
+        x-checker-data:
+          type: pypi
+          name: charset-normalizer
+          packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl
-        sha256: 771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea
+        url: https://files.pythonhosted.org/packages/1e/5e/d4e9f1a599fb8e573b7b87160658329fbf28d19eac2718f51fc3def3aa5a/idna-3.18-py3-none-any.whl
+        sha256: 7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2
+        x-checker-data:
+          type: pypi
+          name: idna
+          packagetype: bdist_wheel
       - type: file
-        url: https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl
-        sha256: 2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6
+        url: https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl
+        sha256: 2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0
+        x-checker-data:
+          type: pypi
+          name: requests
+          packagetype: bdist_wheel
       - &id001
         type: file
-        url: https://files.pythonhosted.org/packages/39/08/aaaad47bc4e9dc8c725e68f9d04865dbcb2052843ff09c97b08904852d84/urllib3-2.6.3-py3-none-any.whl
-        sha256: bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4
+        url: https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl
+        sha256: 9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897
+        x-checker-data:
+          type: pypi
+          name: urllib3
+          packagetype: bdist_wheel
   - name: python3-urllib3
     buildsystem: simple
     build-commands:
@@ -55,37 +86,85 @@ modules:
         --prefix=${FLATPAK_DEST} "urllib3" --no-build-isolation
     sources:
       - *id001
-  - name: python3-pybind11
-    buildsystem: simple
-    cleanup: ["*"]
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pybind11" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/88/c5/e98d9c51f3d5300d5e40ad9037dd6b3b60736fd02ab68dcc98c96be7592d/pybind11-3.0.2-py3-none-any.whl
-        sha256: f8a6500548919cc33bcd220d5f984688326f574fa97f1107f2f4fdb4c6fb019f
-  - name: python3-Pillow
+  - name: python3-pillow
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "Pillow" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pillow" --no-build-isolation
     sources:
       - &id002
         type: file
-        url: https://files.pythonhosted.org/packages/1f/42/5c74462b4fd957fcd7b13b04fb3205ff8349236ea74c7c375766d6c82288/pillow-12.1.1.tar.gz
-        sha256: 9ad8fa5937ab05218e2b6a4cff30295ad35afd2f83ac592e68c0d871bb0fdbc4
+        url: https://files.pythonhosted.org/packages/f7/62/de5bdd77d935331f4f802edc11e4d82950f642caad6cb2f949837b8560e2/pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 0847a763afefb695bc912d7c131e7e0632d4edc1d8698f58ddabec8e46b8b6d3
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: pypi
+          name: pillow
+          packagetype: bdist_wheel
+      - &id003
+        type: file
+        url: https://files.pythonhosted.org/packages/1f/01/e18aff37cb0b4aac47ac90f016d347a49aca667ef97f190b06ac2aabc928/pillow-12.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f7401aebd7f581d7f83a439d87d474999317ee099218e5ad25d125290990ba65
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: pypi
+          name: pillow
+          packagetype: bdist_wheel
   - name: python3-pytesseract
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pytesseract" --no-build-isolation
     sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/b7/b9/c538f279a4e237a006a2c98387d081e9eb060d203d8ed34467cc0f0b9b53/packaging-26.0-py3-none-any.whl
-        sha256: b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529
       - *id002
+      - *id003
       - type: file
         url: https://files.pythonhosted.org/packages/7a/33/8312d7ce74670c9d39a532b2c246a853861120486be9443eebf048043637/pytesseract-0.3.13-py3-none-any.whl
         sha256: 7a99c6c2ac598360693d83a416e36e0b33a67638bb9d77fdcac094a3589d4b34
-name: python3-requirements
+        x-checker-data:
+          type: pypi
+          name: pytesseract
+          packagetype: bdist_wheel
+  - name: python3-hatchling
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "hatchling" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/a9/84/1798b6d85ecde0e31546004efd25c5de1b1f49250644a60cce460e12593a/hatchling-1.32.0-py3-none-any.whl
+        sha256: 0e17c9c3b9aa7c625acc8d0f5b622f107d5049af9ecf5ada4de1aada5be7cdbc
+        x-checker-data:
+          type: pypi
+          name: hatchling
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/f1/d9/7fb5aa316bc299258e68c73ba3bddbc499654a07f151cba08f6153988714/pathspec-1.1.1-py3-none-any.whl
+        sha256: a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189
+        x-checker-data:
+          type: pypi
+          name: pathspec
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl
+        sha256: e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746
+        x-checker-data:
+          type: pypi
+          name: pluggy
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/13/bc/8c13eb66537dce1d2bd3a57132902f38d0e7f5bb46fa9f4daed9fe9d76ee/tomlkit-0.15.1-py3-none-any.whl
+        sha256: 177a05aece5a8ca5266fd3c448abb47b8d352f09d477d3ca8332db4d89b24304
+        x-checker-data:
+          type: pypi
+          name: tomlkit
+          packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/7c/a4/81502f486f01db95bc8320646a8a12511f5e556cb63d5e224d91816605c4/trove_classifiers-2026.6.1.19-py3-none-any.whl
+        sha256: ab4c4ec93cc4a4e7815fa759906e05e6bb3f2fbd92ea0f897288c6a43efd15b3
+        x-checker-data:
+          type: pypi
+          name: trove-classifiers
+          packagetype: bdist_wheel
