@@ -2,7 +2,7 @@
 
 app-id: org.kekikakademi.eFatura
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 command: eFaturaGUI
 
@@ -52,6 +52,6 @@ modules:
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
-      commit: b50f4be453c8c1f894daf00586e345a32969d3b9
+      commit: 706dea2a5c8cbb82678e0c64d71f2266a8dc082c
     - type: file
       path: org.kekikakademi.eFatura.appdata.xml
