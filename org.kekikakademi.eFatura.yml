@@ -43,15 +43,15 @@ modules:
   build-commands:
     - python3 -m pip install . --prefix=${FLATPAK_DEST} --no-build-isolation
     - install -Dm644 org.kekikakademi.eFatura.appdata.xml /app/share/appdata/$FLATPAK_ID.appdata.xml
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+    - install -Dm644 Shared/org.kekikakademi.eFatura.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
 
-    - sed -i '/^Version/d' Shared/org.KekikAkademi.eFatura.desktop
-    - desktop-file-edit --set-icon=$FLATPAK_ID Shared/org.KekikAkademi.eFatura.desktop
-    - install -Dm644 Shared/org.KekikAkademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
+    - sed -i '/^Version/d' Shared/org.kekikakademi.eFatura.desktop
+    - desktop-file-edit --set-icon=$FLATPAK_ID Shared/org.kekikakademi.eFatura.desktop
+    - install -Dm644 Shared/org.kekikakademi.eFatura.desktop /app/share/applications/$FLATPAK_ID.desktop
 
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
-      commit: e562dbad5dfbcb3715bf760e7d1380b8e708a05f
+      commit: 02ec9a949f26cd4c38fbb4c91ac1f03127bef997
     - type: file
       path: org.kekikakademi.eFatura.appdata.xml
