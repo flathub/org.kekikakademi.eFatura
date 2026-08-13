@@ -1,4 +1,4 @@
-# Generated with flatpak-pip-generator --pyproject-file /home/keyiflerolsun/Masaüstü/__tmp/eFatura/pyproject.toml --yaml --checker-data --ignore-pkg pygobject -o /home/keyiflerolsun/Masaüstü/__tmp/eFatura/Shared/SRC/python3-requirements.yaml
+# Generated with flatpak-pip-generator --pyproject-file /home/runner/work/eFatura/eFatura/pyproject.toml --runtime org.gnome.Sdk//49 --prefer-wheels pillow --yaml --checker-data --ignore-pkg pygobject -o /home/runner/work/eFatura/eFatura/Shared/SRC/python3-requirements.yaml
 name: python3-requirements.yaml
 buildsystem: simple
 build-commands: []
@@ -94,11 +94,24 @@ modules:
     sources:
       - &id002
         type: file
-        url: https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz
-        sha256: 3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce
+        url: https://files.pythonhosted.org/packages/f7/62/de5bdd77d935331f4f802edc11e4d82950f642caad6cb2f949837b8560e2/pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+        sha256: 0847a763afefb695bc912d7c131e7e0632d4edc1d8698f58ddabec8e46b8b6d3
+        only-arches:
+          - x86_64
         x-checker-data:
           type: pypi
           name: pillow
+          packagetype: bdist_wheel
+      - &id003
+        type: file
+        url: https://files.pythonhosted.org/packages/1f/01/e18aff37cb0b4aac47ac90f016d347a49aca667ef97f190b06ac2aabc928/pillow-12.3.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
+        sha256: f7401aebd7f581d7f83a439d87d474999317ee099218e5ad25d125290990ba65
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: pypi
+          name: pillow
+          packagetype: bdist_wheel
   - name: python3-pytesseract
     buildsystem: simple
     build-commands:
@@ -106,6 +119,7 @@ modules:
         --prefix=${FLATPAK_DEST} "pytesseract" --no-build-isolation
     sources:
       - *id002
+      - *id003
       - type: file
         url: https://files.pythonhosted.org/packages/7a/33/8312d7ce74670c9d39a532b2c246a853861120486be9443eebf048043637/pytesseract-0.3.13-py3-none-any.whl
         sha256: 7a99c6c2ac598360693d83a416e36e0b33a67638bb9d77fdcac094a3589d4b34
