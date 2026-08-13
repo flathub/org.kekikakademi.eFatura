@@ -1,7 +1,0 @@
-install-freedesktop
-rich
-requests
-urllib3
-pybind11
-Pillow
-pytesseract
