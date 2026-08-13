@@ -52,6 +52,6 @@ modules:
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
-      commit: 02ec9a949f26cd4c38fbb4c91ac1f03127bef997
+      commit: 290d2d6bc94084a6112897f0fc083534e8a7f573
     - type: file
       path: org.kekikakademi.eFatura.appdata.xml
