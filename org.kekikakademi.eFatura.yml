@@ -15,8 +15,6 @@ finish-args:
   - --socket=fallback-x11
   # ? Ağ Erişimi
   - --share=network
-  # ? PulseAudio Kullanarak Sesleri Çal
-  - --socket=pulseaudio
   # ! tesseract Erişim
   - --env=TESSDATA_PREFIX=/app/share/tessdata
 
@@ -52,6 +50,6 @@ modules:
   sources:
     - type: git
       url: https://github.com/keyiflerolsun/eFatura.git
-      commit: f14f86952c237332ac5cbb0ddb90d2ee07714512
+      commit: f7579fb2e9ddb40128292b8680685544df621d42
     - type: file
       path: org.kekikakademi.eFatura.appdata.xml

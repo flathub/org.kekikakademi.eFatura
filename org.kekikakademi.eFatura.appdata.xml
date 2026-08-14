@@ -21,8 +21,27 @@
   <url type="faq">https://blog.keyiflerolsun.dev</url>
 
   <description>
-    <p>E-Invoice Usage Inquiry from Tax or TR Identity Number</p>
-    <p xml:lang="tr_TR">Vergi veya TC Kimlik Numarasından E-Fatura Mükellefiyet Sorgusu</p>
+    <p>
+      eFatura checks whether a given Tax Number or Turkish Identity Number
+      (TC Kimlik No) is registered for e-invoice usage, by querying Turkey's
+      official e-invoice inquiry system operated by the Revenue
+      Administration (Gelir İdaresi Başkanlığı).
+    </p>
+    <p>
+      It is available as a native GTK4/Libadwaita desktop application, a
+      command-line tool, and a Python library, so you can check a result the
+      way that fits your workflow.
+    </p>
+    <p xml:lang="tr_TR">
+      eFatura, girilen bir Vergi Numarası veya TC Kimlik Numarasının
+      e-Fatura sistemine kayıtlı olup olmadığını, Gelir İdaresi
+      Başkanlığı'nın resmi e-fatura sorgu sisteminden sorgular.
+    </p>
+    <p xml:lang="tr_TR">
+      GTK4/Libadwaita ile yazılmış bir masaüstü uygulaması, bir komut
+      satırı aracı ve bir Python kütüphanesi olarak birlikte gelir; sonucu
+      ihtiyacına en uygun şekilde kontrol edebilirsin.
+    </p>
   </description>
 
   <screenshots>
@@ -36,7 +55,7 @@
   </categories>
 
   <releases>
-    <release version="1.1.7" date="2026-08-14">
+    <release version="1.1.8" date="2026-08-14">
       <description>
         <p>
           Arayüzde sorgu sırasında uygulamanın kilitlenmesine neden olan
